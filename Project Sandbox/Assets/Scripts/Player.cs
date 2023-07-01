@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    private void OnEnable()
+    {
+        Action_Attack.Attack += changeAnimation;
+    }
+
+    private void OnDisable()
+    {
+        Action_Attack.Attack -= changeAnimation;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +30,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void changeAnimation()
+    {
+        // Fazer a animação de ataque, não fiz ainda porque sou muito ruim em fazer animações.
     }
 }
